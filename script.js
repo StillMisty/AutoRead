@@ -2,11 +2,12 @@
 // @name        经典阅读自动翻页
 // @author      StillMisty
 // @namespace   https://www.cxstar.com/onlineepub
-// @version     1.3
+// @version     1.4
 // @description 经典阅读自动翻页
 // @updateURL   https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
 // @downloadURL https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
 // @match       https://www.cxstar.com/onlineepub?*
+// @match       https://www.cxstar.com/onlinebook?*
 // @grant       GM_registerMenuCommand
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -20,7 +21,7 @@
 
     var clickButton = function() {
 
-        var button = document.getElementsByClassName("chapter-forward")[0] || document.getElementsByClassName("menu__chapter-forward false")[0];
+        var button = document.getElementsByClassName("chapter-forward")[0] || document.getElementsByClassName("menu__chapter-forward")[0] || document.getElementsByClassName("ic-page-next")[0];
         
         if (button) {
             button.click();
