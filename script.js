@@ -2,7 +2,7 @@
 // @name        经典阅读自动翻页
 // @author      StillMisty
 // @namespace   https://www.cxstar.com/onlineepub
-// @version     1.1
+// @version     1.2
 // @description 经典阅读自动翻页
 // @updateURL   https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
 // @downloadURL https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
@@ -10,6 +10,7 @@
 // @grant       GM_registerMenuCommand
 // @grant       GM_getValue
 // @grant       GM_setValue
+// @run-at      document-idle
 // ==/UserScript==
 
 (function() {
@@ -17,8 +18,9 @@
 
     var intervalTime = GM_getValue('intervalTime', 5000);
 
+    var button = document.getElementsByClassName("chapter-forward")[0] || document.getElementsByClassName("menu__chapter-forward false")[0];
+
     var clickButton = function() {
-        var button = document.getElementsByClassName("chapter-forward")[0] || document.getElementsByClassName("menu__chapter-forward false")[0];
         if (button) {
             button.click();
         } else {
@@ -49,7 +51,7 @@
             checkButtonExist = setInterval(function() {
                 clickButton();
             }, intervalTime);
-            console.log("翻页时间已设置为 " + intervalTime + " 秒");
+            console.log("翻页时间已设置为 " + intervalTime / 1000 + " 秒");
         }
     });
 })();
