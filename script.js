@@ -4,6 +4,8 @@
 // @namespace   https://www.cxstar.com/onlineepub
 // @version     1.0
 // @description 经典阅读自动翻页
+// @updateURL   https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
+// @downloadURL https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
 // @match       https://www.cxstar.com/onlineepub?*
 // @grant       GM_registerMenuCommand
 // @grant       GM_getValue
