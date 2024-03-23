@@ -2,7 +2,7 @@
 // @name        经典阅读自动翻页
 // @author      StillMisty
 // @namespace   https://www.cxstar.com/onlineepub
-// @version     1.0
+// @version     1.1
 // @description 经典阅读自动翻页
 // @updateURL   https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
 // @downloadURL https://raw.githubusercontent.com/StillMisty/AutoRead/master/script.js
